@@ -6,7 +6,7 @@ import requests
 import re
 from bs4 import BeautifulSoup
 ## Settings
-update_interval = 30 # seconds
+update_interval = 10 # seconds
 ## Webscraping
 
 def webscrape():
@@ -55,6 +55,5 @@ def check_for_updates():
     
 while True:
     webscrape()
-    time.sleep(5)
     check_for_updates()
     time.sleep(update_interval)
